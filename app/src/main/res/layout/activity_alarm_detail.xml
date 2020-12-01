@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlarmDetailActivity">
+
+    <Button
+        android:id="@+id/buttonBack"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:icon="@drawable/ic_baseline_arrow_back_24"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/hourWrapper"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/switchCompat"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBack">
+
+        <TextView
+            android:id="@+id/textHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="48sp"
+            tools:text="9" />
+
+        <TextView
+            android:id="@+id/textDivider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hour_divider"
+            android:textSize="48sp" />
+
+        <TextView
+            android:id="@+id/textMinute"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="48sp"
+            tools:text="20" />
+
+        <TextView
+            android:id="@+id/textPeriod"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:textSize="32sp"
+            tools:text="AM" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/switchActive"
+        android:layout_marginEnd="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBack" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hourWrapper">
+
+        <CheckBox
+            android:id="@+id/checkboxSunday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableTop="?android:attr/listChoiceIndicatorMultiple"
+            android:text="@string/sun"
+            android:textAlignment="center"
+            app:useMaterialThemeColors="true" />
+
+        <CheckBox
+            android:id="@+id/checkboxMonday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableTop="?android:attr/listChoiceIndicatorMultiple"
+            android:text="@string/mon"
+            android:textAlignment="center"
+            app:useMaterialThemeColors="true" />
+
+        <CheckBox
+            android:id="@+id/checkboxTuesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableTop="?android:attr/listChoiceIndicatorMultiple"
+            android:text="@string/tue"
+            android:textAlignment="center"
+            app:useMaterialThemeColors="true" />
+
+        <CheckBox
+            android:id="@+id/checkboxWednesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableTop="?android:attr/listChoiceIndicatorMultiple"
+            android:text="@string/wed"
+            android:textAlignment="center"
+            app:useMaterialThemeColors="true" />
+
+        <CheckBox
+            android:id="@+id/checkboxThursday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableTop="?android:attr/listChoiceIndicatorMultiple"
+            android:text="@string/thu"
+            android:textAlignment="center"
+            app:useMaterialThemeColors="true" />
+
+        <CheckBox
+            android:id="@+id/checkboxFriday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableTop="?android:attr/listChoiceIndicatorMultiple"
+            android:text="@string/fri"
+            android:textAlignment="center"
+            app:useMaterialThemeColors="true" />
+
+        <CheckBox
+            android:id="@+id/checkboxSaturday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableTop="?android:attr/listChoiceIndicatorMultiple"
+            android:text="@string/sat"
+            android:textAlignment="center"
+            app:useMaterialThemeColors="true" />
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/checkboxVibrate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/vibrate"
+        app:layout_constraintEnd_toStartOf="@+id/buttonDelete"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/buttonDelete"
+        style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/delete"
+        android:textAllCaps="false"
+        app:icon="@drawable/ic_outline_delete_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

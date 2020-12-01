@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/textHour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        tools:text="hora" />
+
+    <TextView
+        android:id="@+id/textDivider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hour_divider"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/textMinute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="36sp"
+        tools:text="minute" />
+
+    <TextView
+        android:id="@+id/textPeriod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:textSize="20sp"
+        tools:text="AM" />
+
+
+</LinearLayout>
